@@ -1,7 +1,7 @@
 "use client";
 import { Component } from "react";
 
-class Row extends Component<{
+class Column extends Component<{
   gap?: number;
   justify?:
     | "flex-start"
@@ -15,18 +15,35 @@ class Row extends Component<{
   children: React.ReactNode;
   className?: string;
 }> {
+  constructor(props: {
+    gap?: number;
+    justify?:
+      | "flex-start"
+      | "flex-end"
+      | "center"
+      | "space-between"
+      | "space-around"
+      | "space-evenly";
+    alignItems?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
+    wrap?: boolean;
+    children: React.ReactNode;
+    className?: string;
+  }) {
+    super(props);
+  }
+
   render() {
     const {
       gap = 1,
       justify = "flex-start",
       alignItems = "flex-start",
       wrap = false,
-      className = "",
+      className,
     } = this.props;
 
     return (
       <div
-        className={`flex ${className}`}
+        className={`flex flex-col ${className}`}
         style={{
           gap: `${gap * 0.25}rem`,
           justifyContent: justify,
@@ -40,4 +57,4 @@ class Row extends Component<{
   }
 }
 
-export default Row;
+export default Column;
