@@ -2,6 +2,7 @@ import Column from "@/components/layout-library/Column";
 import Container from "@/components/layout-library/Container";
 import { Grid } from "@/components/layout-library/Grid";
 import Row from "@/components/layout-library/Row";
+import Separator from "@/components/layout-library/Separator";
 import Link from "next/link";
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
       <div className="flex flex-1 gap-0 text-white">
         <aside className="bg-neutral-800 w-1/6">
           <Column className="px-12 py-6 h-full">
+            <Separator color="#333" />
+
             <Link href="#" className="italic">
               about
             </Link>
@@ -34,6 +37,47 @@ export default function Home() {
             <Link href="#" className="italic">
               contact
             </Link>
+
+            <Separator color="#333" height={4} />
+
+            <Link href="#" className="italic">
+              donate
+            </Link>
+
+            <Separator color="#333" height={4} />
+
+            <Link href="#" className="italic">
+              twitter
+            </Link>
+            <Link href="#" className="italic">
+              instagram
+            </Link>
+            <Link href="#" className="italic">
+              facebook
+            </Link>
+            <Link href="#" className="italic">
+              bluesky
+            </Link>
+            <Link href="#" className="italic">
+              snapchat
+            </Link>
+            <Link href="#" className="italic">
+              donate
+            </Link>
+
+            <Separator color="#333" />
+
+            <Link href="#" className="italic">
+              settings
+            </Link>
+            <Link href="#" className="italic">
+              privacy
+            </Link>
+            <Link href="#" className="italic">
+              terms & conditions
+            </Link>
+
+            <Separator color="#333" />
           </Column>
         </aside>
 
